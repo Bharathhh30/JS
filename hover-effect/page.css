@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hover-effect{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    color: white;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+.hover-effect.expand{
+    height: 300px;
+    width: 300px;
+    font-size: 25px;
+}
