@@ -4,9 +4,10 @@ import Nav from  './components/Bav';
 import PopularProducts from './sections/PopularProducts';
 import SpecialOffers from './sections/SpecialOffers';
 import Subscribe from './sections/Subscribe';
-import SuperQuality from './sections/SuperQuality';
+import SuperQuality from './sections/Superquality';
 import Footer from './sections/Footer';
 import CustomerReviews from './sections/CustomerReviews';
+import Services from './sections/Services';
 
 function App() {
   return (
@@ -24,18 +25,12 @@ function App() {
           <SuperQuality/>
         </section>
         <section className="padding-x py-10">
-          Services
+          <Services/>
         </section>
         <section className="padding">
           <SpecialOffers/>
         </section>
-        <section className="padding bg-pale-blue ">
-          <CustomerReviews/>
-        </section>
-        <section className="padding-x sm:py-32 py-16 w-full">
-          <Subscribe/>
-        </section>
-        <section className="padding-t pb- px-8 bg-black">
+        <section className="padding-t pb- px-8 bg-black flex justify-center items-center">
           <Footer/>
         </section>
       </main>

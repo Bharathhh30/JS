@@ -8,7 +8,7 @@ function PopularProducts() {
     className='max-container max-sm:mt-12'>
       <div className='flex flex-cols justify-start  gap-5'>
         <h2 className='text-4xl font-palanquin font-bold'>Our 
-          <span className='text-coral-red'> Popular</span> Product</h2>
+          <span className='text-coral-red'> Popular</span> Product</h2><br />
         <p className='text-slate-gray lg:max-w-lg mt-2 font-montserrat'>Experience Top Quality of the Nike products by feeling and wearing it.</p>
       </div>
 
