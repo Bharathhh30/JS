@@ -1,5 +1,7 @@
 import { useCallback, useState , useEffect ,useRef} from 'react'
 import { LampDemo } from './components/ui/Lamp'
+import { PinContainer } from './components/ui/3d-pin'
+
 
 function App() {
   const [length , setLength] = useState(8)
@@ -42,6 +44,7 @@ function App() {
 
   return (
     <>
+      <PinContainer/>
       <LampDemo/>
       <div className='w-full  flex justify-center items-center '>
         <div className='bg-slate-800   py-10 mt-24 rounded-lg px-9 shadow-xl ring-1 ring-slate-900/5'>
