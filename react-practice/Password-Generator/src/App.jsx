@@ -1,7 +1,7 @@
 import { useCallback, useState , useEffect ,useRef} from 'react'
 import { LampDemo } from './components/ui/Lamp'
-import { PinContainer } from './components/ui/3d-pin'
-
+import { CardContainer , CardBody , CardItem } from './components/ui/Back'
+import dog77 from './assets/dog77.png'
 
 function App() {
   const [length , setLength] = useState(8)
@@ -44,8 +44,9 @@ function App() {
 
   return (
     <>
-      <PinContainer/>
+      
       <LampDemo/>
+      <CardContainer/>
       <div className='w-full  flex justify-center items-center '>
         <div className='bg-slate-800   py-10 mt-24 rounded-lg px-9 shadow-xl ring-1 ring-slate-900/5'>
           <h1 className='text-4xl text-blue-300 text-center '>Password Generator</h1>
@@ -76,6 +77,26 @@ function App() {
           </div>
         </div>
       </div>
+      <span>
+      <CardContainer className="inter-var h-[600px] w-[120%]">
+              <CardBody className="bg-white relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[30] sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardItem translateZ="50" className='w-full flex justify-center items-center mt-8'>
+                  <img
+                    src={dog77}
+                    height="900"
+                    width="900"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                  <h1 className='text-xl font-semibold gap-x-2 px-2'>Happy to integrate you into the 3D card</h1>
+                </CardItem>
+                
+
+
+
+              </CardBody>
+            </CardContainer>
+            </span>
     </>
   )
 }
