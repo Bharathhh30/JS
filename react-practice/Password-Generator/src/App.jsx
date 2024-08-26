@@ -2,6 +2,8 @@ import { useCallback, useState , useEffect ,useRef} from 'react'
 import { LampDemo } from './components/ui/Lamp'
 import { CardContainer , CardBody , CardItem } from './components/ui/Back'
 import dog77 from './assets/dog77.png'
+import { TypewriterEffect, TypewriterEffectSmooth } from './components/ui/TypeEffect'
+import { TextRevealCard, TextRevealCardDescription , TextRevealCardTitle } from './components/ui/Text-reveal'
 
 function App() {
   const [length , setLength] = useState(8)
@@ -41,7 +43,24 @@ function App() {
   },[password])
 
   useEffect(()=>{passwordGenerator()} , [length,numberAllowed,charAllowed,passwordGenerator])   // function and dependencies
-
+  const words = [
+    {
+      text: "Build ",
+    },
+    {
+      text: "awesome ",
+    },
+    {
+      text: "apps ",
+    },
+    {
+      text: "with ",
+    },
+    {
+      text: "Aceternity.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
   return (
     <>
       
@@ -77,7 +96,7 @@ function App() {
           </div>
         </div>
       </div>
-      <span>
+      <div className="container flex items-center justify-center gap-10">
       <CardContainer className="inter-var h-[600px] w-[120%]">
               <CardBody className="bg-white relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[30] sm:w-[30rem] h-auto rounded-xl p-6 border">
               <CardItem translateZ="50" className='w-full flex justify-center items-center mt-8'>
@@ -96,7 +115,18 @@ function App() {
 
               </CardBody>
             </CardContainer>
-            </span>
+              
+            </div>
+            <div>
+                <TypewriterEffectSmooth words={words}/>
+              </div>
+
+            <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+              <TextRevealCard text="Slide to look at Question" revealText="What are you llook dsdvsfvdbgm hn">
+                <TextRevealCardTitle>What is Pawnter?</TextRevealCardTitle>
+                <TextRevealCardDescription>Pawnter is your furry friend</TextRevealCardDescription>
+              </TextRevealCard>
+            </div>
     </>
   )
 }
